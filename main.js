@@ -26,7 +26,7 @@ function creatRow() {
             <input class="text-center total" type="number" value="" readonly >
         </td>
         <td class="text-center forProblem" data-column="Action">
-            <button class="btn btn-danger setBtn" onclick="removeField('row${count}');myFun();">
+            <button class="btn btn-danger setBtn" onclick="removeField('row${count}');setVluNull();">
                 <i class="fa-solid fa-minus"></i>
             </button>
             <button class="btn btn-primary setBtn" onclick="addField()">
@@ -82,7 +82,7 @@ function addField() {
                 <input class="text-center total" type="number" value="" readonly>
             </td>
             <td class="text-center forProblem" data-column="Action">
-            <button class="btn btn-danger setBtn" onclick="removeField('row${count}')">
+            <button class="btn btn-danger setBtn" onclick="removeField('row${count}');setVluNull();">
                 <i class="fa-solid fa-minus"></i>
             </button>
             <button class="btn btn-primary setBtn" onclick="addField()">

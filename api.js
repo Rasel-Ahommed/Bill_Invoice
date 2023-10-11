@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", function myFun() {
+document.addEventListener("DOMContentLoaded", function () {
     let phoneInput = document.querySelector('#number');
     let nameInput = document.querySelector('#name');
     let addressInput = document.querySelector('#address');
@@ -64,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function myFun() {
 
 
     // show selected product price 
-
-
-    document.addEventListener('change', function calculet() {
+    document.addEventListener('change', function () {
         let inputProduct = document.getElementsByClassName("productName"); //target product name field
         let pricefield = document.getElementsByClassName('unitPrice');     //target unit price field
         let qtyField = document.getElementsByClassName("qty");             //target qty field
@@ -109,15 +107,14 @@ document.addEventListener("DOMContentLoaded", function myFun() {
 
                 }
                 else {
-                    alert("This Product are not Available !");
                     inputvalue.value = "";
                 }
             }
             productPrice();
         };
     });
-
 });
+
 
 let paymentTotal = document.getElementById("paymentTotal");
 let payment = document.getElementById("payment");
