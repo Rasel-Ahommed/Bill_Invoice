@@ -1,0 +1,50 @@
+<td class="text-center" data-column="Action">
+    <button class="btn btn-danger" onclick="removeField('row${count}')">
+        <i class="fa-solid fa-minus"></i>
+    </button>
+    <button class="btn btn-primary" onclick="addField()">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+</td>
+
+
+<datalist id="product">
+    <option>aaaa</option>
+    <option>bbb</option>
+    <option>ccc</option>
+    <option>ddd</option>
+</datalist>
+
+
+
+// add a row after click the add button 
+addButton.addEventListener("click", () => {
+    const tr = document.createElement('tr');
+    tr.setAttribute('id', `row${count}`);
+    tr.innerHTML = `<td class="text-center" data-column="ITEM">
+    <input type="text" list="product" class="productName"/>
+    <datalist id="product">
+    </datalist>
+    </td>
+    <td class="text-center" data-column="Unit Price" >
+        <input class="text-center" type="number" value="" readonly id="unitPrice">
+    </td>
+    <td class="text-center" data-column="Qty">
+        <input type="number" min="1" value=1>
+    </td>
+    <td class="text-center" data-column="Total" class="">
+        <input class="text-center" type="number" value="" readonly>
+    </td>
+    <td class="text-center" data-column="Action">
+            <button class="btn btn-danger setBtn" onclick="removeField('row${count}')">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button class="btn btn-primary setBtn" onclick="addField()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </td>`
+    tbody.appendChild(tr);
+    removeButton();
+    setButton();
+    count += 1;
+});

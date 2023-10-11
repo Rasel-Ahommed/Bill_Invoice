@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headline {
+    text-align: center;
+    padding: 17px;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+}
+
+.lables {
+    padding-block: 13px;
+    font-size: 16px;
+}
+
+.lableitm {
+    padding-block: 10px;
+}
+
+.inputBox {
+    padding-inline: 12px;
+    padding-block: 5px;
+}
+
+.input {
+    padding-block: 10px;
+}
+
+.input input {
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    width: 16rem;
+}
+
+/* table css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 18px;
+}
+
+td input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* total price field  */
+.totalPrice {
+    display: flex;
+    justify-content: center;
+}
+
+.priceTR {
+    display: flex;
+    justify-content: center;
+    background-color: transparent !important;
+}
+
+.priceTR td {
+    width: 29%;
+}
+
+.mr{
+    margin-right: 35px
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* customar detalse field  */
+    .content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input input {
+        width: 10rem;
+    }
+
+    /* responsive table  */
+    .mainTable table {
+        width: 100%;
+    }
+
+    .mainTable table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    .mainTable thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .mainTable tr {
+        border: 1px solid #ccc;
+    }
+
+    .mainTable td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .mainTable td input {
+        border: none;
+        border-bottom: 1px solid;
+        outline: none;
+    }
+
+    .mainTable td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-column);
+        color: #000;
+        font-weight: bold;
+    }
+
+    .totalPrice {
+        display: block;
+        justify-content: center;
+    }
+
+    /* for action field  */
+    td.forProblem {
+        height: 50px;
+    }
+
+}
